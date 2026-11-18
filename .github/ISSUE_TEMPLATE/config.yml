@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions and ideas
-    url: https://github.com/laughing-hermit/librocat/discussions
+    url: https://github.com/laughinghermit/librocat/discussions
     about: Ask and share in Discussions.
   - name: A security problem
-    url: https://github.com/laughing-hermit/librocat/security/policy
+    url: https://github.com/laughinghermit/librocat/security/policy
     about: Report it privately, as SECURITY.md says.
   - name: librocat account or billing
     url: https://librocat.com/about

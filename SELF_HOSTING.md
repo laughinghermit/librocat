@@ -51,7 +51,7 @@ You need Docker with Compose v2, or Podman with `podman compose`. You also
 need git, openssl, and about 2 GB of memory.
 
 ```bash
-git clone https://github.com/laughing-hermit/librocat.git
+git clone https://github.com/laughinghermit/librocat.git
 cd librocat/self-host
 ./setup.sh          # with Podman: COMPOSE="podman compose" ./setup.sh
 ```
@@ -76,12 +76,12 @@ Then:
 
    ```bash
    npx add-mcp http://localhost:3000/mcp --name librocat -g
-   npx skills add laughing-hermit/librocat -g
+   npx skills add laughinghermit/librocat -g
    ```
 
    That adds the MCP server to your agents and installs librocat's Agent
    Skills. For Antigravity, copy the plugin (`npx giget
-   gh:laughing-hermit/librocat/plugin ~/.gemini/config/plugins/librocat --force`),
+   gh:laughinghermit/librocat/plugin ~/.gemini/config/plugins/librocat --force`),
    then set `serverUrl` in its `mcp_config.json`. By hand instead: `claude mcp add --transport http librocat
    http://localhost:3000/mcp`. The dashboard's Connect page shows the same
    MCP + Skills commands with your server's address, and that address for a
@@ -154,7 +154,7 @@ variables before `.env`: if your shell exports `AI_GATEWAY_API_KEY` or
   watch's page fetches. Your agent can be local too: opencode on a model
   Ollama serves on your machine, connected with
   `npx add-mcp http://localhost:3000/mcp --name librocat -g -a opencode` and
-  `npx skills add laughing-hermit/librocat -g -a opencode`.
+  `npx skills add laughinghermit/librocat -g -a opencode`.
 - **Hybrid.** Your agent and librocat's model are separate choices. For
   example: Claude Code with an offline librocat; or opencode on a local
   model with librocat.com, or with your own librocat running Jev.
@@ -317,7 +317,7 @@ A library moves as OKF files, either way, through the dashboard:
 
    ```bash
    npx add-mcp https://librocat.com/mcp --name librocat -g
-   npx skills add laughing-hermit/librocat -g
+   npx skills add laughinghermit/librocat -g
    ```
 
 Revisions stay behind: the files carry each concept as it is now.

@@ -52,7 +52,7 @@ on 2026-09-14 and kept current by Dependabot since (checked 2026-09-28).
 | Deploy alert | A failed Production deploy (Vercel's deployment status) opens a GitHub issue, which emails the watchers; the next successful deploy closes it | `.github/workflows/deploy-alert.yml` |
 | `pnpm/setup@v3`, `actions/checkout@v7` | The actions CI uses. `pnpm/setup` reads the pnpm version from `packageManager` | same file |
 | Dependabot | Monthly grouped updates for pnpm (`npm` ecosystem) and the actions | `.github/dependabot.yml` |
-| GitHub | `laughing-hermit/librocat` (public: this monorepo, the source of truth) and `laughing-hermit/librocat-status` (the status page) | `gh` |
+| GitHub | `laughinghermit/librocat` (public: this monorepo, the source of truth) | `gh` |
 | Vercel | Hosts `apps/web` as the project `librocat` (root directory `apps/web`, Node 24); production builds run `convex deploy --cmd 'pnpm run build'` | `apps/web/vercel.json`, `vercel link` in `apps/web` |
 | Vercel Web Analytics (`@vercel/analytics`) | Page views on every page of librocat.com, the dashboard's too, by route (never an id, a search, or a query), plus a few named events with kinds and ranges only; no cookie. $0.03 per 1,000 events on Pro, 2 properties an event | `apps/web/src/components/site-analytics.tsx`, `apps/web/src/lib/analytics.ts` |
 | Vercel Speed Insights (`@vercel/speed-insights`) | How fast each route loads and responds for real visitors, by route only, the same way; no cookie. The free tier, which every Vercel plan has with no switch to turn on: 10,000 events in 30 days, then collection pauses, never bills (Plus, $10 a month, is off). It loads from Vercel's `/_vercel/speed-insights/` paths: the first-party base path that serves Web Analytics answers 404 for it | `apps/web/src/components/site-analytics.tsx` |
@@ -95,13 +95,13 @@ these changes, the code follows it, not the other way around.
 | [Claude Code plugins](https://code.claude.com/docs/en/plugins-reference) | `plugin/.claude-plugin/plugin.json` and the root `.claude-plugin/marketplace.json`, plus the directory listing fields (`displayName`, `icon`, the support, privacy, and terms URLs). `claude plugin validate --strict` checks both |
 | [OpenAI plugins](https://developers.openai.com/plugins/build/plugins.md) | Codex and ChatGPT share one plugin directory. Codex reads the portable `plugin/plugin.json` and the root `.agents/plugins/marketplace.json`; the listing lives in `extensions["com.openai"].interface` (30-character name and short description, up to 3 starter prompts, square logo and composer icon). Every MCP tool sets `readOnlyHint`, `destructiveHint`, and `openWorldHint`; `/.well-known/openai-apps-challenge` proves the domain |
 | [Cursor plugins](https://cursor.com/docs/reference/plugins) | Cursor loads an Agent Plugin, and reads `plugin/.cursor-plugin/plugin.json` (with its logo) and the root `.cursor-plugin/marketplace.json` for `/add-plugin` with the repository's URL, Import from Repo, and its marketplace |
-| [Agent Skills](https://agentskills.io/home) | The `SKILL.md` format of the skills in the plugin, and the `npx skills add laughing-hermit/librocat` path |
+| [Agent Skills](https://agentskills.io/home) | The `SKILL.md` format of the skills in the plugin, and the `npx skills add laughinghermit/librocat` path |
 | [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) | The server and client SDK (v2) behind every MCP surface: the `/mcp` endpoint and the e2e clients |
 | [mcp-handler](https://github.com/vercel-labs/mcp-handler) | The remote MCP route on Vercel: stateless Streamable HTTP, `withMcpAuth` (401 + RFC 9728 challenge), the protected-resource metadata |
 | [Supabase self-hosting](https://supabase.com/docs/guides/self-hosting) | The model for self-hosting librocat (`self-host/`, SELF_HOSTING.md): Docker Compose, settings in environment variables, community support, and a managed service beside it with a free tier |
-| [plugins](https://www.npmjs.com/package/plugins) (Vercel Labs) | `npx plugins add laughing-hermit/librocat`: installs the Agent Plugin (librocat.com's MCP entry and the skills) into every detected agent |
+| [plugins](https://www.npmjs.com/package/plugins) (Vercel Labs) | `npx plugins add laughinghermit/librocat`: installs the Agent Plugin (librocat.com's MCP entry and the skills) into every detected agent |
 | [add-mcp](https://github.com/neon-solutions/add-mcp) (Neon) | `npx add-mcp https://librocat.com/mcp --name librocat -g`: writes the MCP entry into 22 agents' config files, for librocat.com or a self-hosted URL |
-| [skills](https://github.com/vercel-labs/skills) (Vercel Labs) | `npx skills add laughing-hermit/librocat -g`: copies the Agent Skills from this repository into 79 agents' skill folders |
+| [skills](https://github.com/vercel-labs/skills) (Vercel Labs) | `npx skills add laughinghermit/librocat -g`: copies the Agent Skills from this repository into 79 agents' skill folders |
 | [mcp-remote](https://www.npmjs.com/package/mcp-remote) | How an agent that only runs stdio servers reaches librocat's remote MCP, OAuth included |
 | [Open Knowledge Format, the announcement](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing) | Why OKF exists: a shared Markdown library that agents read and update, curated like code |
 | [OKF SPEC](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md) | The storage and export format: frontmatter (`type` required), bundles, `index.md` / `log.md`, links, provenance (`generated`, `verified`, `sources`, `stale_after`) |
@@ -111,5 +111,4 @@ these changes, the code follows it, not the other way around.
 
 | Place | What it is |
 | --- | --- |
-| [github.com/laughing-hermit/librocat](https://github.com/laughing-hermit/librocat) | This monorepo, Apache-2.0: the code that runs librocat.com |
-| [github.com/laughing-hermit/librocat-status](https://github.com/laughing-hermit/librocat-status) | The status page (Upptime), served at `status.librocat.com` |
+| [github.com/laughinghermit/librocat](https://github.com/laughinghermit/librocat) | This monorepo, Apache-2.0: the code that runs librocat.com |

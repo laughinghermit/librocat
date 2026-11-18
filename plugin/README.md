@@ -36,13 +36,13 @@ dashboard.
 
 **Coding agents**, the four librocat focuses on, each its own way:
 
-- **Claude Code:** `/plugin marketplace add laughing-hermit/librocat`, then
+- **Claude Code:** `/plugin marketplace add laughinghermit/librocat`, then
   `/plugin install librocat@librocat`.
-- **Codex:** `codex plugin marketplace add laughing-hermit/librocat`, then
+- **Codex:** `codex plugin marketplace add laughinghermit/librocat`, then
   `codex plugin add librocat@librocat`.
-- **Cursor:** in its chat, `/add-plugin https://github.com/laughing-hermit/librocat`.
+- **Cursor:** in its chat, `/add-plugin https://github.com/laughinghermit/librocat`.
 - **GitHub Copilot**, with the Copilot CLI:
-  `copilot plugin install laughing-hermit/librocat:plugin`.
+  `copilot plugin install laughinghermit/librocat:plugin`.
 
 **Every agent at once, with a package manager.** With
 [Agent Plugins](https://agent-plugins.org), every agent your terminal can find
@@ -51,7 +51,7 @@ Code, and Cursor and GitHub Copilot in VS Code when their commands are
 installed), with the [plugins CLI](https://www.npmjs.com/package/plugins):
 
 ```bash
-npx plugins add laughing-hermit/librocat      # or pnpm dlx / yarn dlx / bunx
+npx plugins add laughinghermit/librocat      # or pnpm dlx / yarn dlx / bunx
 ```
 
 **Without Agent Plugins: MCP + Skills.** For OpenCode, OpenClaw, Hermes,
@@ -62,7 +62,7 @@ command adds the server to the agents on your machine, the second the
 
 ```bash
 npx add-mcp https://librocat.com/mcp --name librocat -g
-npx skills add laughing-hermit/librocat -g
+npx skills add laughinghermit/librocat -g
 ```
 
 [add-mcp](https://github.com/neon-solutions/add-mcp) writes each agent's MCP
@@ -76,18 +76,18 @@ Claude Code, `claude mcp add --transport http librocat https://librocat.com/mcp`
 for OpenClaw, `openclaw mcp add librocat --url https://librocat.com/mcp
 --transport streamable-http --auth oauth`, then `openclaw mcp login librocat`;
 for Hermes, `hermes mcp add librocat --url https://librocat.com/mcp --auth
-oauth`), then `npx skills add laughing-hermit/librocat`. For Antigravity,
-`npx giget gh:laughing-hermit/librocat/plugin ~/.gemini/config/plugins/librocat --force`
+oauth`), then `npx skills add laughinghermit/librocat`. For Antigravity,
+`npx giget gh:laughinghermit/librocat/plugin ~/.gemini/config/plugins/librocat --force`
 copies this folder, in Antigravity's form.
 
 **Desktop agents**, the ones that work on your computer, install this plugin
 from the repository, which brings the skills and the MCP together:
 
 - **Claude Desktop** and Cowork: Customize › Plugins › Add › Add
-  marketplace, with `laughing-hermit/librocat`; then install librocat, and
+  marketplace, with `laughinghermit/librocat`; then install librocat, and
   connect its connector on the plugin's Connectors tab.
 - **ChatGPT**, in its desktop app: a Business or Enterprise admin imports
-  `https://github.com/laughing-hermit/librocat` (Admin › Plugins › Add ›
+  `https://github.com/laughinghermit/librocat` (Admin › Plugins › Add ›
   Import marketplace); members install librocat from Plugins. Without an
   admin, add `https://librocat.com/mcp` in the desktop app's Settings › MCP
   servers › Add server: the MCP without the skills.
@@ -105,7 +105,7 @@ URL:
 
 ```bash
 npx add-mcp https://kb.example.com/mcp --name librocat -g
-npx skills add laughing-hermit/librocat -g
+npx skills add laughinghermit/librocat -g
 ```
 
 For Antigravity, copy this folder as above, then set `serverUrl` in its

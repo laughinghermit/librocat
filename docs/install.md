@@ -11,27 +11,27 @@ account. No API keys.
 **Claude Code**, one after the other:
 
 ```text
-/plugin marketplace add laughing-hermit/librocat
+/plugin marketplace add laughinghermit/librocat
 /plugin install librocat@librocat
 ```
 
 **Codex**, in a terminal:
 
 ```bash
-codex plugin marketplace add laughing-hermit/librocat
+codex plugin marketplace add laughinghermit/librocat
 codex plugin add librocat@librocat
 ```
 
 **Cursor**, in its chat:
 
 ```text
-/add-plugin https://github.com/laughing-hermit/librocat
+/add-plugin https://github.com/laughinghermit/librocat
 ```
 
 **GitHub Copilot**, in a terminal, with the Copilot CLI:
 
 ```bash
-copilot plugin install laughing-hermit/librocat:plugin
+copilot plugin install laughinghermit/librocat:plugin
 ```
 
 ## Every agent at once
@@ -48,25 +48,25 @@ CLI, Grok Build, Kimi Code, and Cursor and GitHub Copilot in VS Code when their
 **npm**
 
 ```bash
-npx plugins add laughing-hermit/librocat
+npx plugins add laughinghermit/librocat
 ```
 
 **pnpm**
 
 ```bash
-pnpm dlx plugins add laughing-hermit/librocat
+pnpm dlx plugins add laughinghermit/librocat
 ```
 
 **yarn**
 
 ```bash
-yarn dlx plugins add laughing-hermit/librocat
+yarn dlx plugins add laughinghermit/librocat
 ```
 
 **bun**
 
 ```bash
-bunx plugins add laughing-hermit/librocat
+bunx plugins add laughinghermit/librocat
 ```
 
 ### Without Agent Plugins: MCP + Skills
@@ -81,28 +81,28 @@ the server to every agent it finds, the second the
 
 ```bash
 npx add-mcp https://librocat.com/mcp --name librocat -g
-npx skills add laughing-hermit/librocat -g
+npx skills add laughinghermit/librocat -g
 ```
 
 **pnpm**
 
 ```bash
 pnpm dlx add-mcp https://librocat.com/mcp --name librocat -g
-pnpm dlx skills add laughing-hermit/librocat -g
+pnpm dlx skills add laughinghermit/librocat -g
 ```
 
 **yarn**
 
 ```bash
 yarn dlx add-mcp https://librocat.com/mcp --name librocat -g
-yarn dlx skills add laughing-hermit/librocat -g
+yarn dlx skills add laughinghermit/librocat -g
 ```
 
 **bun**
 
 ```bash
 bunx add-mcp https://librocat.com/mcp --name librocat -g
-bunx skills add laughing-hermit/librocat -g
+bunx skills add laughinghermit/librocat -g
 ```
 
 [add-mcp](https://github.com/neon-solutions/add-mcp) writes each agent's MCP
@@ -114,7 +114,7 @@ when the agent signs in. For a self-hosted librocat, use its address instead of
 `https://librocat.com/mcp`.
 
 To add one agent at a time, add the server, then the skills with
-`npx skills add laughing-hermit/librocat`:
+`npx skills add laughinghermit/librocat`:
 
 <details>
 <summary><strong>Claude Code</strong></summary>
@@ -175,7 +175,7 @@ its plugin carries the server and the skills together. This copies the
 repository's `plugin/` folder:
 
 ```bash
-npx giget gh:laughing-hermit/librocat/plugin ~/.gemini/config/plugins/librocat --force
+npx giget gh:laughinghermit/librocat/plugin ~/.gemini/config/plugins/librocat --force
 ```
 
 For a second library alongside the first, or a self-hosted librocat, then
@@ -224,17 +224,17 @@ The agents that work on your computer. Each installs librocat's plugin from
 this repository, which brings the skills and the MCP together.
 
 - **Claude Desktop** and Cowork: Customize › Plugins › Add › Add
-  marketplace, with `laughing-hermit/librocat`. Then install librocat from
+  marketplace, with `laughinghermit/librocat`. Then install librocat from
   it, and connect its librocat connector on the plugin's Connectors tab.
 - **ChatGPT**, in its desktop app: a Business or Enterprise admin opens Admin
   › Plugins › Add › Import marketplace, with
-  `https://github.com/laughing-hermit/librocat`. Then members install librocat
+  `https://github.com/laughinghermit/librocat`. Then members install librocat
   from Plugins, or the admin sets it to Installed. Without an admin, add
   `https://librocat.com/mcp` in the desktop app's Settings › MCP servers ›
   Add server: the MCP without the skills.
 - **Grok Bot** installs Cursor's plugins: a Cursor Teams admin opens Dashboard
   › Plugins & MCPs › Team Marketplaces › Add Marketplace › Import from Repo,
-  with `https://github.com/laughing-hermit/librocat`. Then each member adds
+  with `https://github.com/laughinghermit/librocat`. Then each member adds
   librocat from Connect apps in Grok Bot's sidebar. On your own, Cursor's
   marketplace will have it once librocat is listed.
 

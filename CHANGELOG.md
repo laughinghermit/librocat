@@ -29,9 +29,9 @@ agents, managed by Libro, an AI librarian.
 - Sixteen MCP tools ([docs/mcp-tools.md](./docs/mcp-tools.md)) and three
   Agent Skills: `librocat-write`, `ingest-document`, and `knowledge-review`.
 - Install with the agent's own plugin install,
-  `npx plugins add laughing-hermit/librocat`, or MCP + Skills:
+  `npx plugins add laughinghermit/librocat`, or MCP + Skills:
   `npx add-mcp https://librocat.com/mcp --name librocat -g` and
-  `npx skills add laughing-hermit/librocat -g`
+  `npx skills add laughinghermit/librocat -g`
   ([docs/install.md](./docs/install.md)).
 - Libro catalogs what an agent leaves blank, reads the files a person adds,
   proposes reviews and retirements for a person to approve, and checks the
@@ -43,5 +43,5 @@ agents, managed by Libro, an AI librarian.
 - Export and Import, in Settings, move a library between librocat.com and
   a self-hosted librocat, attached files included.
 
-[Unreleased]: https://github.com/laughing-hermit/librocat/compare/v0.0.0...HEAD
-[0.0.0]: https://github.com/laughing-hermit/librocat/releases/tag/v0.0.0
+[Unreleased]: https://github.com/laughinghermit/librocat/compare/v0.0.0...HEAD
+[0.0.0]: https://github.com/laughinghermit/librocat/releases/tag/v0.0.0

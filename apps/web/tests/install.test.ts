@@ -15,15 +15,15 @@ test("the four coding agents, each with its own plugin install", () => {
 test("every agent at once: the plugin, else MCP + Skills, one tab per package manager", () => {
   expect(everyAgentCommands()[0]).toEqual({
     pm: "npm",
-    plugin: "npx plugins add laughing-hermit/librocat",
+    plugin: "npx plugins add laughinghermit/librocat",
     mcp: "npx add-mcp https://librocat.com/mcp --name librocat -g",
-    skills: "npx skills add laughing-hermit/librocat -g",
+    skills: "npx skills add laughinghermit/librocat -g",
   });
   expect(everyAgentCommands().map((t) => t.plugin)).toEqual([
-    "npx plugins add laughing-hermit/librocat",
-    "pnpm dlx plugins add laughing-hermit/librocat",
-    "yarn dlx plugins add laughing-hermit/librocat",
-    "bunx plugins add laughing-hermit/librocat",
+    "npx plugins add laughinghermit/librocat",
+    "pnpm dlx plugins add laughinghermit/librocat",
+    "yarn dlx plugins add laughinghermit/librocat",
+    "bunx plugins add laughinghermit/librocat",
   ]);
 });
 

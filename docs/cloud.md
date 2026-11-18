@@ -70,12 +70,12 @@ export/delete, and read-only browsing.
 
 The four coding agents (Claude Code, Codex, Cursor, GitHub Copilot) each
 install librocat's plugin their own way;
-`npx plugins add laughing-hermit/librocat` installs it in every agent that
+`npx plugins add laughinghermit/librocat` installs it in every agent that
 takes Agent Plugins; and the desktop agents install it from this repository
 as a marketplace (README, "Install"). Any MCP client that speaks remote MCP
 connects to `https://librocat.com/mcp` and runs the OAuth sign-in (the
 Agent Plugin's `mcp.json` is exactly that URL). `npx add-mcp https://librocat.com/mcp --name librocat -g` writes that
-entry into the agents on a machine, and `npx skills add laughing-hermit/librocat -g`
+entry into the agents on a machine, and `npx skills add laughinghermit/librocat -g`
 installs the Agent Skills; a self-hosted librocat swaps the URL. An agent
 that can only spawn stdio servers reaches the endpoint through mcp-remote.
 librocat ships no client of its own: agents, the dashboard, and the e2e

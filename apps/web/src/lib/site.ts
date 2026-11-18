@@ -7,14 +7,11 @@ export const site = {
   // the 160 characters it shows. `description` stays the long one.
   summary:
     "Tell one agent once. Every agent remembers. The open-source knowledge base Claude Code, Codex, Cursor, and Copilot share, kept current by an AI librarian.",
-  install: "npx plugins add laughing-hermit/librocat",
+  install: "npx plugins add laughinghermit/librocat",
   // The public repository: this monorepo.
-  repo: "https://github.com/laughing-hermit/librocat",
+  repo: "https://github.com/laughinghermit/librocat",
   // GitHub Releases is the public changelog; a page here would only copy it.
-  changelog: "https://github.com/laughing-hermit/librocat/releases",
-  // Upptime in github.com/laughing-hermit/librocat-status: checks / and /mcp as
-  // often as GitHub's free scheduler runs it, usually every few hours.
-  status: "https://status.librocat.com",
+  changelog: "https://github.com/laughinghermit/librocat/releases",
   contact: "support@librocat.com",
   // The legal entity that operates librocat and appears on Terms, Privacy,
   // invoices, and Stripe. The product is librocat; the company stays behind it.
@@ -22,7 +19,7 @@ export const site = {
   jurisdiction: "the State of Delaware, USA",
   // The date at the top of Terms, Privacy, Security, and Disclaimer. Change it
   // whenever one of them changes.
-  legalUpdated: "October 30, 2026",
+  legalUpdated: "November 18, 2026",
   productLine: "librocat is a Laughing Hermit, Inc. product.",
   // The one-line footer/disclaimer truth: what this is at its core.
   atItsCore:
@@ -36,7 +33,7 @@ export const MCP_URL = "https://librocat.com/mcp";
 export const shellWord = (url: string) => (url.includes("?") ? `"${url}"` : url);
 
 /** The Agent Skills alone (vercel-labs/skills), for agents without Agent Plugin support. */
-export const SKILLS_COMMAND = "npx skills add laughing-hermit/librocat -g";
+export const SKILLS_COMMAND = "npx skills add laughinghermit/librocat -g";
 
 // Connect, the hero, and the README, in three parts: the four coding agents
 // (each its own plugin install), every agent at once with a package manager
@@ -64,10 +61,7 @@ export const codingAgents = [
     agent: "Claude Code",
     where: "In Claude Code, one after the other:",
     shell: false,
-    steps: [
-      "/plugin marketplace add laughing-hermit/librocat",
-      "/plugin install librocat@librocat",
-    ],
+    steps: ["/plugin marketplace add laughinghermit/librocat", "/plugin install librocat@librocat"],
     method: "Claude Code plugin",
   },
   {
@@ -75,7 +69,7 @@ export const codingAgents = [
     where: "In a terminal, one after the other:",
     shell: true,
     steps: [
-      "codex plugin marketplace add laughing-hermit/librocat",
+      "codex plugin marketplace add laughinghermit/librocat",
       "codex plugin add librocat@librocat",
     ],
     method: "Codex plugin",
@@ -92,7 +86,7 @@ export const codingAgents = [
     where: "In a terminal, with GitHub's Copilot CLI:",
     shell: true,
     // The plugin's own folder: the repository's root holds the marketplaces.
-    steps: ["copilot plugin install laughing-hermit/librocat:plugin"],
+    steps: ["copilot plugin install laughinghermit/librocat:plugin"],
     method: "Copilot plugin",
   },
 ] as const;
@@ -101,7 +95,7 @@ export const codingAgents = [
 export const runners = { npm: "npx", pnpm: "pnpm dlx", yarn: "yarn dlx", bun: "bunx" } as const;
 
 /** Every agent at once with Agent Plugins, with npm: the `plugins` CLI (npmjs.com/package/plugins). */
-export const PLUGINS_COMMAND = `${runners.npm} plugins add laughing-hermit/librocat`;
+export const PLUGINS_COMMAND = `${runners.npm} plugins add laughinghermit/librocat`;
 
 /**
  * Every agent at once, one entry per package manager, both routes:
@@ -117,14 +111,14 @@ export const PLUGINS_COMMAND = `${runners.npm} plugins add laughing-hermit/libro
 export function everyAgentCommands(url: string = MCP_URL) {
   return Object.entries(runners).map(([pm, run]) => ({
     pm,
-    plugin: `${run} plugins add laughing-hermit/librocat`,
+    plugin: `${run} plugins add laughinghermit/librocat`,
     mcp: `${run} add-mcp ${shellWord(url)} --name librocat -g`,
-    skills: `${run} skills add laughing-hermit/librocat -g`,
+    skills: `${run} skills add laughinghermit/librocat -g`,
   }));
 }
 
 /** librocat's GitHub marketplace, as Claude takes it (owner/repo): its plugin, skills and MCP. */
-export const CLAUDE_MARKETPLACE = "laughing-hermit/librocat";
+export const CLAUDE_MARKETPLACE = "laughinghermit/librocat";
 
 /**
  * The desktop agents that work on your computer, each its own app. A

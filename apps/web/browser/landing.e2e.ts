@@ -17,11 +17,11 @@ test("the landing page says what librocat is and how to start", async ({ app, sc
   await expect(screen.getByText("codex plugin add librocat@librocat")).toBeVisible();
   await screen.getByRole("tab", "Cursor").tap();
   await expect(
-    screen.getByText("/add-plugin https://github.com/laughing-hermit/librocat"),
+    screen.getByText("/add-plugin https://github.com/laughinghermit/librocat"),
   ).toBeVisible();
   await screen.getByRole("tab", "GitHub Copilot").tap();
   await expect(
-    screen.getByText("copilot plugin install laughing-hermit/librocat:plugin"),
+    screen.getByText("copilot plugin install laughinghermit/librocat:plugin"),
   ).toBeVisible();
   // Another agent finds every way to connect.
   await expect(screen.getByRole("link", "See every way to connect")).toBeVisible();
@@ -52,8 +52,8 @@ test("every way to connect, in public: coding agents, every agent at once, deskt
   await expect(screen.getByText("/plugin install librocat@librocat")).toBeVisible();
   // Every agent at once, by package manager: the plugin, else MCP + Skills.
   await screen.getByRole("tab", "bun").tap();
-  await expect(screen.getByText("bunx plugins add laughing-hermit/librocat")).toBeVisible();
-  await expect(screen.getByText("bunx skills add laughing-hermit/librocat -g")).toBeVisible();
+  await expect(screen.getByText("bunx plugins add laughinghermit/librocat")).toBeVisible();
+  await expect(screen.getByText("bunx skills add laughinghermit/librocat -g")).toBeVisible();
   await screen.getByRole("tab", "ChatGPT Desktop").tap();
   await expect(screen.getByText(/Admin › Plugins › Add › Import marketplace/)).toBeVisible();
 });

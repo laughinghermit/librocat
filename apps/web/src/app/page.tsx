@@ -176,7 +176,7 @@ const structuredData = {
       logo: `${ORIGIN}/logo.svg`,
       email: site.contact,
       parentOrganization: { "@type": "Organization", name: site.company },
-      sameAs: ["https://github.com/laughing-hermit", site.repo, site.status],
+      sameAs: ["https://github.com/laughinghermit", site.repo],
     },
     {
       "@type": "WebSite",

@@ -2,7 +2,7 @@
 
 The librocat Agent Skills, following the [Agent Skills Standard](https://agentskills.io).
 They live here, inside the Agent Plugin (`plugin/`); the repository's root
-`skills` links to this folder so `npx skills add laughing-hermit/librocat` finds
+`skills` links to this folder so `npx skills add laughinghermit/librocat` finds
 them too.
 
 - **`librocat-write`**: what belongs in the library and how to write it:

@@ -12,7 +12,7 @@ test("Connect shows the MCP address and the commands", async ({ app, screen, bro
   await expect(screen.getByText("/plugin install librocat@librocat")).toBeVisible();
   await screen.getByRole("tab", "GitHub Copilot").tap();
   await expect(
-    screen.getByText("copilot plugin install laughing-hermit/librocat:plugin"),
+    screen.getByText("copilot plugin install laughinghermit/librocat:plugin"),
   ).toBeVisible();
   // The desktop agents, each its own app: each installs the plugin.
   await expect(screen.getByText("Desktop agents")).toBeVisible();
@@ -27,11 +27,11 @@ test("Connect shows the MCP address and the commands", async ({ app, screen, bro
   ).toBeVisible();
   await expect(screen.getByText(/adds librocat from Connect apps/)).toBeVisible();
   // Every agent at once, by package manager: the plugin, else MCP + Skills.
-  await expect(screen.getByText("npx plugins add laughing-hermit/librocat")).toBeVisible();
+  await expect(screen.getByText("npx plugins add laughinghermit/librocat")).toBeVisible();
   // The plain address: librocat.com when hosted, the local site here.
   await expect(screen.getByText(/npx add-mcp \S+\/mcp --name librocat -g/)).toBeVisible();
   await screen.getByRole("tab", "pnpm").tap();
-  await expect(screen.getByText("pnpm dlx plugins add laughing-hermit/librocat")).toBeVisible();
+  await expect(screen.getByText("pnpm dlx plugins add laughinghermit/librocat")).toBeVisible();
 });
 
 test("a person creates a second library and switches between them", async ({
@@ -50,7 +50,7 @@ test("a person creates a second library and switches between them", async ({
   await expect(screen.getByRole("heading", "Connect an agent")).toBeVisible({ timeout: 20_000 });
   await expect(screen.getByText("/plugin install librocat@librocat")).toBeVisible();
   await expect(screen.getByText(/Customize › Plugins › Add › Add marketplace/)).toBeVisible();
-  await expect(screen.getByText("npx plugins add laughing-hermit/librocat")).toBeVisible();
+  await expect(screen.getByText("npx plugins add laughinghermit/librocat")).toBeVisible();
   await expect(screen.getByText(/npx add-mcp \S+\/mcp --name librocat -g/)).toBeVisible();
   await expect(screen.getByText(/library=/)).toBeHidden();
   // The sign-in's consent page asks which library, the open one checked.
@@ -63,7 +63,7 @@ test("a person creates a second library and switches between them", async ({
   await screen.getByRole("menuitem", "My library").tap();
   await expect(screen.getByRole("button", /My library/)).toBeVisible({ timeout: 10_000 });
   await app.open("/dashboard/connect");
-  await expect(screen.getByText("npx plugins add laughing-hermit/librocat")).toBeVisible({
+  await expect(screen.getByText("npx plugins add laughinghermit/librocat")).toBeVisible({
     timeout: 10_000,
   });
 });
