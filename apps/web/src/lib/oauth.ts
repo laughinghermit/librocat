@@ -50,7 +50,7 @@ export function protectedResourceMetadata(req: Request): Response {
       scopes_supported: MCP_SCOPES,
       bearer_methods_supported: ["header"],
       resource_name: "librocat",
-      resource_documentation: "https://github.com/laughing-hermit/librocat",
+      resource_documentation: "https://github.com/laughinghermit/librocat",
     },
     { headers: { ...CORS, "Cache-Control": CDN_CACHED } },
   );

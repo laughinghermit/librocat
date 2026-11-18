@@ -33,7 +33,7 @@ apps/web/next-env.d.ts
 *.tsbuildinfo
 
 # Dev-only agent skills (shadcn), restored from skills-lock.json; kept out of
-# the repo so `npx skills add laughing-hermit/librocat` finds only librocat's own.
+# the repo so `npx skills add laughinghermit/librocat` finds only librocat's own.
 .claude/skills/
 
 # A maintainer's own notes for Claude Code (loaded with CLAUDE.md, never committed)

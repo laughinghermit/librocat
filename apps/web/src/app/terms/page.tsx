@@ -50,7 +50,7 @@ const sections = [
   },
   {
     title: "Availability and changes",
-    body: `We work to keep librocat available, but we do not promise uptime (${site.status.replace("https://", "")} shows how it runs), and we may change or retire features. We email you about material changes to prices or these terms at least 30 days before they take effect; other changes apply when we post them here, with a new date at the top. If you disagree with a change, cancel and export your library before it takes effect. If we shut librocat down, we email you at least 30 days before, so you can export.`,
+    body: `We work to keep librocat available, but we do not promise uptime, and we may change or retire features. We email you about material changes to prices or these terms at least 30 days before they take effect; other changes apply when we post them here, with a new date at the top. If you disagree with a change, cancel and export your library before it takes effect. If we shut librocat down, we email you at least 30 days before, so you can export.`,
   },
   {
     title: "Ending",

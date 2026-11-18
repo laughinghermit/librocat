@@ -15,7 +15,7 @@
     <a href="./docs">Docs</a>
   </p>
   <p>
-    <img src="https://github.com/laughing-hermit/librocat/actions/workflows/ci.yml/badge.svg" alt="CI" />
+    <img src="https://github.com/laughinghermit/librocat/actions/workflows/ci.yml/badge.svg" alt="CI" />
     <img src="https://img.shields.io/badge/license-Apache--2.0-1f744f" alt="Apache-2.0" />
   </p>
 </div>
@@ -50,16 +50,16 @@ sign in or make a free account. No API keys.
 
 | Agent | Install |
 | --- | --- |
-| Claude Code | `/plugin marketplace add laughing-hermit/librocat`, then `/plugin install librocat@librocat` |
-| Codex | `codex plugin marketplace add laughing-hermit/librocat`, then `codex plugin add librocat@librocat` |
-| Cursor | `/add-plugin https://github.com/laughing-hermit/librocat`, in its chat |
-| GitHub Copilot | `copilot plugin install laughing-hermit/librocat:plugin`, with the Copilot CLI |
+| Claude Code | `/plugin marketplace add laughinghermit/librocat`, then `/plugin install librocat@librocat` |
+| Codex | `codex plugin marketplace add laughinghermit/librocat`, then `codex plugin add librocat@librocat` |
+| Cursor | `/add-plugin https://github.com/laughinghermit/librocat`, in its chat |
+| GitHub Copilot | `copilot plugin install laughinghermit/librocat:plugin`, with the Copilot CLI |
 
 Or every agent on your computer at once, with
 [Agent Plugins](https://agent-plugins.org):
 
 ```bash
-npx plugins add laughing-hermit/librocat
+npx plugins add laughinghermit/librocat
 ```
 
 OpenCode, Windsurf, Gemini CLI, the desktop agents (Claude Desktop, ChatGPT),
@@ -70,10 +70,10 @@ any other MCP client, and a self-hosted librocat:
 ## Self-host
 
 ```bash
-git clone https://github.com/laughing-hermit/librocat.git
+git clone https://github.com/laughinghermit/librocat.git
 cd librocat/self-host && ./setup.sh
 npx add-mcp http://localhost:3000/mcp --name librocat -g
-npx skills add laughing-hermit/librocat -g
+npx skills add laughinghermit/librocat -g
 ```
 
 The same site, dashboard, and MCP on your own server, with Docker or Podman.
@@ -133,9 +133,8 @@ pnpm run plugin      # the Agent Plugin's manifests
 ```
 
 See [DEVELOPERS.md](./DEVELOPERS.md) and [CONTRIBUTING.md](./CONTRIBUTING.md).
-Security: [SECURITY.md](./SECURITY.md). Status:
-[status.librocat.com](https://status.librocat.com). Changelog:
-[GitHub Releases](https://github.com/laughing-hermit/librocat/releases), with
+Security: [SECURITY.md](./SECURITY.md). Changelog:
+[GitHub Releases](https://github.com/laughinghermit/librocat/releases), with
 the notes from [CHANGELOG.md](./CHANGELOG.md).
 
 Apache-2.0. © 2026 Laughing Hermit, Inc. librocat is a Laughing Hermit, Inc.
